@@ -1,6 +1,10 @@
 from __future__ import division
 
-from collections import Mapping, namedtuple, OrderedDict
+from collections import namedtuple, OrderedDict
+try:
+    from collections.abc import Mapping
+except ImportError:
+    from collections import Mapping
 
 import numpy as np
 from six import iteritems, iterkeys, itervalues
